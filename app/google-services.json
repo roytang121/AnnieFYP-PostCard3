@@ -1,0 +1,84 @@
+{
+  "project_info": {
+    "project_id": "fyp-postcard",
+    "project_number": "313608903040",
+    "name": "FYP postcard"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313608903040:android:f8f124f10b19bc07",
+        "client_id": "android:com.example.user.postcard",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.example.user.postcard",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313608903040:android:165b250a61b0b686",
+        "client_id": "android:com.example.user.anniefyppostcard",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.example.user.anniefyppostcard",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313608903040-mnmb5tdokqnh51ooi0m3tsdolikpnkl6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.anniefyppostcard",
+            "certificate_hash": "2C463AD4EE8392C9A9B43D1A14B6BC8ED0BF3E58"
+          }
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.androidhive.materialtabs.fragments.ThreeFragment">
+
+    <LinearLayout
+        android:id="@+id/postcardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/postcard_base"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/postcardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/writeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Write"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

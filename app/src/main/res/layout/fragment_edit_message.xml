@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#9e9e9e"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/inputTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:maxLines="10"
+        android:lines="10"
+        android:gravity="top"
+        android:hint="Input message"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputTextView"
+        android:text="Save"/>
+</RelativeLayout>
