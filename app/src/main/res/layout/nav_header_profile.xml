@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:contentDescription="Profile picture"
+        android:drawable="@drawable/hdpi_japan_pool"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
