@@ -27,7 +27,7 @@ public class DesignPostCardsActivity extends AppCompatActivity {
             R.drawable.add_image_icon_white,
             R.drawable.edit_icon_white,
             R.drawable.write_postcard_icon_white,
-            R.drawable.ar_icon_white,
+            R.drawable.ar_icon_new,
             R.drawable.mdpi_send,
     };
 
