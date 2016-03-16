@@ -68,6 +68,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        FacebookSdk.sdkInitialize(getApplicationContext());
+
+
         setContentView(R.layout.activity_login);
         FacebookSdk.sdkInitialize(getApplicationContext());
 
