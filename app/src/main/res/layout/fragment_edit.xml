@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+
     tools:context="info.androidhive.materialtabs.fragments.TwoFragment">
 
     <RelativeLayout
@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#BCB">
+        android:padding="16dp"
+        >
 
         <com.example.user.anniefyppostcard.PostCardView
             android:id="@+id/postcardView"
@@ -30,5 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:layout_below="@+id/photoViewContainer"/>
+        android:textColor="@android:color/white"
+        android:backgroundTint="#B2EBF2"
+        android:layout_alignParentBottom="true"
+        />
 </RelativeLayout>

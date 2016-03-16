@@ -45,7 +45,7 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
 
         /* set up photoview and attacher */
         photoView = (PhotoView) root.findViewById(R.id.photoView);
-        photoView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        photoView.setBackgroundColor(Color.parseColor("#333333"));
 
         postCardView = (PostCardView) root.findViewById(R.id.postcardView);
 
@@ -76,7 +76,7 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
 
                 final int computedHeight = (int) (rootWidth * 0.75);
                 final RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, computedHeight);
-                int margin = (int) Dp.toPx(16, getActivity().getApplicationContext());
+                final int margin = (int) Dp.toPx(9, getActivity().getApplicationContext());
                 params.setMargins(margin, margin, margin, margin);
                 params.addRule(RelativeLayout.CENTER_IN_PARENT);
                 photoView.setLayoutParams(params);
@@ -85,7 +85,7 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
                 postCardView.post(new Runnable() {
                     @Override
                     public void run() {
-                        final RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, computedHeight);
+                        final RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, computedHeight + margin * 2);
                         postCardView.setLayoutParams(params);
                     }
                 });

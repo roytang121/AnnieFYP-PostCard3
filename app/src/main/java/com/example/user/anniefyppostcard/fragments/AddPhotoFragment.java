@@ -8,14 +8,12 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.example.user.anniefyppostcard.PostCardView;
 import com.example.user.anniefyppostcard.R;
@@ -26,12 +24,9 @@ import com.kbeanie.imagechooser.api.ChosenImages;
 import com.kbeanie.imagechooser.api.ImageChooserListener;
 import com.kbeanie.imagechooser.api.ImageChooserManager;
 
-import java.io.File;
-
 
 public class AddPhotoFragment extends BaseFragment implements View.OnClickListener, ImageChooserListener {
 
-    private ImageView pickPhotoImageView;
     private PostCardView postCardView;
 
     private String[] pickerOptions = new String[]{
@@ -65,15 +60,14 @@ public class AddPhotoFragment extends BaseFragment implements View.OnClickListen
     }
 
     public void setup(View root) {
-        pickPhotoImageView = (ImageView) root.findViewById(R.id.pickPhotoImageView);
         postCardView = (PostCardView) root.findViewById(R.id.postcardView);
 
-        pickPhotoImageView.setOnClickListener(this);
+        postCardView.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v == this.pickPhotoImageView) {
+        if (v == this.postCardView) {
             // create dialog
             showPicker();
         }
@@ -162,15 +156,15 @@ public class AddPhotoFragment extends BaseFragment implements View.OnClickListen
                 PostCardController.sharedInstance().setChosenImage(image);
 
                 if (image != null) {
-                    AddPhotoFragment.this.pickPhotoImageView.setImageURI(Uri.parse(new File(image
-                            .getFileThumbnail()).toString()));
                     if (getActivity() instanceof DesignPostCardsActivity) {
                         ((DesignPostCardsActivity) getActivity()).stage(1);
                     }
                 }
 
                 // set to postcardView
-                postCardView.setBitmap(decodedOriginal);
+                if (decodedOriginal != null) {
+                    postCardView.setBitmap(decodedOriginal);
+                }
             }
         });
     }

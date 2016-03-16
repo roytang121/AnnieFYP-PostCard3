@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context="info.androidhive.materialtabs.fragments.ThreeFragment">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/postcardContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +14,24 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/postcard_base"/>
-    </LinearLayout>
+        <TextView
+            android:id="@+id/previewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="38dp"
+            android:maxLines="12"
+            android:text="message"/>
+        <TextView
+            android:id="@+id/previewAddress"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:text="address"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="70dp"
+            android:maxLines="10"/>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_below="@id/postcardContainer"
