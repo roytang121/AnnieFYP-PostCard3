@@ -6,6 +6,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.user.anniefyppostcard.PostCardView;
 import com.example.user.anniefyppostcard.R;
 import com.example.user.anniefyppostcard.activity.DesignPostCardsActivity;
 import com.kbeanie.imagechooser.api.ChooserType;
@@ -29,6 +32,7 @@ import java.io.File;
 public class AddPhotoFragment extends BaseFragment implements View.OnClickListener, ImageChooserListener {
 
     private ImageView pickPhotoImageView;
+    private PostCardView postCardView;
 
     private String[] pickerOptions = new String[]{
             "Photo album",
@@ -62,6 +66,7 @@ public class AddPhotoFragment extends BaseFragment implements View.OnClickListen
 
     public void setup(View root) {
         pickPhotoImageView = (ImageView) root.findViewById(R.id.pickPhotoImageView);
+        postCardView = (PostCardView) root.findViewById(R.id.postcardView);
 
         pickPhotoImageView.setOnClickListener(this);
     }
@@ -140,9 +145,13 @@ public class AddPhotoFragment extends BaseFragment implements View.OnClickListen
     /* ImageChooserListener */
     @Override
     public void onImageChosen(final ChosenImage image) {
+
+        // not in main thread
         finalPath = image.getFilePathOriginal();
         thumbPath = image.getFileThumbnail();
         thumbPathSmall = image.getFileThumbnailSmall();
+        final Bitmap decodedOriginal = BitmapFactory.decodeFile(image.getFilePathOriginal());
+
 
         this.getActivity().runOnUiThread(new Runnable() {
 
@@ -159,6 +168,9 @@ public class AddPhotoFragment extends BaseFragment implements View.OnClickListen
                         ((DesignPostCardsActivity) getActivity()).stage(1);
                     }
                 }
+
+                // set to postcardView
+                postCardView.setBitmap(decodedOriginal);
             }
         });
     }
