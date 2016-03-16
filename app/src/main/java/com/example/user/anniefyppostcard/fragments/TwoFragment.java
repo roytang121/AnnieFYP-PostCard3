@@ -1,7 +1,6 @@
 package com.example.user.anniefyppostcard.fragments;
 
 import android.graphics.Color;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -63,15 +62,19 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
         super.onViewCreated(view, savedInstanceState);
 
         /* fix photoview ratio to 4:3 */
-        Point size = new Point();
-        getActivity().getWindowManager().getDefaultDisplay().getSize(size);
-//        int rootWidth = view.getMeasuredWidth();
+        photoView.post(new Runnable() {
+            @Override
+            public void run() {
+//                Point size = new Point();
+//                getActivity().getWindowManager().getDefaultDisplay().getSize(size);
+                int rootWidth = photoView.getWidth();
 
-        int computedHeight = (int) (size.x * 0.75);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, computedHeight);
-        photoView.setLayoutParams(params);
-
-        photoView.setZoomable(true);
+                int computedHeight = (int) (rootWidth * 0.75);
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, computedHeight);
+                photoView.setLayoutParams(params);
+                photoView.setZoomable(true);
+            }
+        });
     }
 
     public void onNext(View view) {
