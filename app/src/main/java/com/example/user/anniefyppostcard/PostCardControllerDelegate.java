@@ -5,4 +5,5 @@ package com.example.user.anniefyppostcard;
  */
 public interface PostCardControllerDelegate {
     void onMediaUpdate();
+    void onDataUpdate();
 }

@@ -53,6 +53,7 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                PostCardController.sharedInstance().setCropped(photoView.getVisibleRectangleBitmap());
                 onNext(v);
             }
         });
@@ -127,5 +128,10 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
     @Override
     public void onMediaUpdate() {
         updateImage();
+    }
+
+    @Override
+    public void onDataUpdate() {
+
     }
 }

@@ -1,5 +1,6 @@
 package com.example.user.anniefyppostcard.fragments;
 
+import android.graphics.Bitmap;
 import android.net.Uri;
 
 import com.example.user.anniefyppostcard.PostCardAddress;
@@ -23,6 +24,8 @@ public class PostCardController {
     private PostCardMessage message;
 
     private PostCardAddress address;
+
+    private Bitmap cropped;
 //    private
 
     public static PostCardController sharedInstance() {
@@ -87,6 +90,10 @@ public class PostCardController {
 
     public void setMessage(PostCardMessage message) {
         this.message = message;
+
+        for (PostCardControllerDelegate delegate : this.delegates) {
+            delegate.onDataUpdate();
+        }
     }
 
     public PostCardAddress getAddress() {
@@ -95,6 +102,18 @@ public class PostCardController {
 
     public void setAddress(PostCardAddress address) {
         this.address = address;
+
+        for (PostCardControllerDelegate delegate : this.delegates) {
+            delegate.onDataUpdate();
+        }
+    }
+
+    public Bitmap getCropped() {
+        return cropped;
+    }
+
+    public void setCropped(Bitmap cropped) {
+        this.cropped = cropped;
     }
 
     public void reset() {
