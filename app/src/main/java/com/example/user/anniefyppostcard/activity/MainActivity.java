@@ -1,6 +1,5 @@
 package com.example.user.anniefyppostcard.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -14,7 +13,6 @@ import android.view.MenuItem;
 
 import com.example.user.anniefyppostcard.R;
 import com.example.user.anniefyppostcard.fragments.DesignFragment;
-import com.facebook.FacebookSdk;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
@@ -58,8 +56,8 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         mViewPager.addOnPageChangeListener(this);
 
 
-        Intent loginIntent = new Intent(this, LoginActivity.class);
-        startActivity(loginIntent);
+//        Intent loginIntent = new Intent(this, LoginActivity.class);
+//        startActivity(loginIntent);
     }
 
 
