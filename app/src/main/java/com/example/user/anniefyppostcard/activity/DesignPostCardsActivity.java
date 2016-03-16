@@ -15,9 +15,7 @@ import com.example.user.anniefyppostcard.fragments.FiveFragment;
 import com.example.user.anniefyppostcard.fragments.FourFragment;
 import com.example.user.anniefyppostcard.fragments.ThreeFragment;
 import com.example.user.anniefyppostcard.fragments.TwoFragment;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +29,7 @@ public class DesignPostCardsActivity extends AppCompatActivity {
             R.drawable.add_image_icon_white,
             R.drawable.edit_icon_white,
             R.drawable.write_postcard_icon_white,
-            R.drawable.ar_icon_white,
+            R.drawable.ar_icon_new,
             R.drawable.mdpi_send,
     };
 
