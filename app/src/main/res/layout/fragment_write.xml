@@ -7,7 +7,8 @@
     <LinearLayout
         android:id="@+id/postcardContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="18dp">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,19 +21,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:weightSum="2">
 
         <Button
             android:id="@+id/writeButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Write"
+            android:layout_height="80dp"
+            android:text="Message"
+            android:backgroundTint="@android:color/darker_gray"
+            android:layout_marginRight="8dp"
+            android:textColor="@android:color/white"
             android:layout_weight="1"/>
 
         <Button
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginLeft="8dp"
             android:text="Address"
+            android:textColor="@android:color/white"
             android:layout_weight="1"/>
 
     </LinearLayout>

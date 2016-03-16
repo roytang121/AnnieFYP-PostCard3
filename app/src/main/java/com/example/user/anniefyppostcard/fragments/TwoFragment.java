@@ -7,9 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
+import com.example.user.anniefyppostcard.Dp;
 import com.example.user.anniefyppostcard.PostCardControllerDelegate;
+import com.example.user.anniefyppostcard.PostCardView;
 import com.example.user.anniefyppostcard.R;
 import com.example.user.anniefyppostcard.activity.DesignPostCardsActivity;
 
@@ -22,6 +24,7 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
 
     PhotoView photoView;
     PhotoViewAttacher mAttacher;
+    PostCardView postCardView;
 
     public TwoFragment() {
         // Required empty public constructor
@@ -43,6 +46,8 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
         /* set up photoview and attacher */
         photoView = (PhotoView) root.findViewById(R.id.photoView);
         photoView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+        postCardView = (PostCardView) root.findViewById(R.id.postcardView);
 
         Button nextButton = (Button) root.findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -69,12 +74,24 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
 //                getActivity().getWindowManager().getDefaultDisplay().getSize(size);
                 int rootWidth = photoView.getWidth();
 
-                int computedHeight = (int) (rootWidth * 0.75);
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, computedHeight);
+                final int computedHeight = (int) (rootWidth * 0.75);
+                final RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, computedHeight);
+                int margin = (int) Dp.toPx(16, getActivity().getApplicationContext());
+                params.setMargins(margin, margin, margin, margin);
+                params.addRule(RelativeLayout.CENTER_IN_PARENT);
                 photoView.setLayoutParams(params);
                 photoView.setZoomable(true);
+
+                postCardView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        final RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, computedHeight);
+                        postCardView.setLayoutParams(params);
+                    }
+                });
             }
         });
+
     }
 
     public void onNext(View view) {

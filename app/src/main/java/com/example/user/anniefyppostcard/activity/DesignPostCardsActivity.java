@@ -1,6 +1,5 @@
 package com.example.user.anniefyppostcard.activity;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -15,7 +14,6 @@ import com.example.user.anniefyppostcard.fragments.FiveFragment;
 import com.example.user.anniefyppostcard.fragments.FourFragment;
 import com.example.user.anniefyppostcard.fragments.ThreeFragment;
 import com.example.user.anniefyppostcard.fragments.TwoFragment;
-
 
 import java.util.ArrayList;
 import java.util.List;

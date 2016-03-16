@@ -137,9 +137,9 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Explore";
                 case 1:
-                    return "SECTION 2";
+                    return "Community";
                 case 2:
                     return "Design";
             }

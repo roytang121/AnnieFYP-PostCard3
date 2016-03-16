@@ -2,23 +2,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
     android:padding="16dp"
     tools:context="info.androidhive.materialtabs.fragments.TwoFragment">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/photoViewContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#BCB">
 
+        <com.example.user.anniefyppostcard.PostCardView
+            android:id="@+id/postcardView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
         <uk.co.senab.photoview.PhotoView
             android:id="@+id/photoView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_centerInParent="true"
             android:scaleType="centerCrop"/>
-    </LinearLayout>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/nextButton"
