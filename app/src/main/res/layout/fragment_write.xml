@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/postcard_base"/>
+            android:src="@drawable/postcard_back"/>
     </LinearLayout>
 
     <LinearLayout
