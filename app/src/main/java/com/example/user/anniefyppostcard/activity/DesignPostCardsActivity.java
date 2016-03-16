@@ -24,11 +24,11 @@ public class DesignPostCardsActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private int[] tabIcons = {
-            R.drawable.add_image_icon_white,
-            R.drawable.edit_icon_white,
-            R.drawable.write_postcard_icon_white,
-            R.drawable.ar_icon_new,
-            R.drawable.mdpi_send,
+            R.drawable.add_image_icon_white_s,
+            R.drawable.edit_icon_s,
+            R.drawable.write_postcard_icon_white_s,
+            R.drawable.ar_icon_new_s,
+            R.drawable.mdpi_send_s,
     };
 
     @Override
