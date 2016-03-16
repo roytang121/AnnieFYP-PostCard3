@@ -18,7 +18,7 @@
             android:id="@+id/previewMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="34dp"
+            android:layout_marginTop="50dp"
             android:layout_marginLeft="38dp"
             android:maxLines="12"
             android:text="message"/>

@@ -6,12 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.user.anniefyppostcard.R;
 import com.example.user.anniefyppostcard.activity.EditMessageActivity;
 
 
 public class ThreeFragment extends Fragment {
+
+    TextView previewMessage;
 
     public ThreeFragment() {
         // Required empty public constructor
@@ -38,5 +41,4 @@ public class ThreeFragment extends Fragment {
 
         return root;
     }
-
 }
