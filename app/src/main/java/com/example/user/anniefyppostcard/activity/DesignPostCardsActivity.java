@@ -1,5 +1,6 @@
 package com.example.user.anniefyppostcard.activity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,21 +11,28 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.user.anniefyppostcard.R;
 import com.example.user.anniefyppostcard.fragments.AddPhotoFragment;
+import com.example.user.anniefyppostcard.fragments.FiveFragment;
+import com.example.user.anniefyppostcard.fragments.FourFragment;
 import com.example.user.anniefyppostcard.fragments.ThreeFragment;
 import com.example.user.anniefyppostcard.fragments.TwoFragment;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DesignPostCardsActivity extends AppCompatActivity {
 
-//    private Toolbar toolbar;
+    //    private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private int[] tabIcons = {
             R.drawable.add_image_icon_white,
-            R.drawable.style_icon,
-            R.drawable.write_postcard_icon_white
+            R.drawable.edit_icon_white,
+            R.drawable.write_postcard_icon_white,
+            R.drawable.ar_icon_white,
+            R.drawable.mdpi_send,
     };
 
     @Override
@@ -48,13 +56,17 @@ public class DesignPostCardsActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
         tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+        tabLayout.getTabAt(3).setIcon(tabIcons[3]);
+        tabLayout.getTabAt(4).setIcon(tabIcons[4]);
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new AddPhotoFragment(), "One");
+        adapter.addFrag(new AddPhotoFragment(), "Add photos");
         adapter.addFrag(new TwoFragment(), "Edit");
         adapter.addFrag(new ThreeFragment(), "Write");
+        adapter.addFrag(new FourFragment(), "AR");
+        adapter.addFrag(new FiveFragment(), "Send");
         viewPager.setAdapter(adapter);
     }
 

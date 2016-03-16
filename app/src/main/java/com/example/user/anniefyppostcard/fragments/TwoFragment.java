@@ -39,7 +39,7 @@ public class TwoFragment extends Fragment implements PostCardControllerDelegate 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_two, container, false);
+        View root = inflater.inflate(R.layout.fragment_edit, container, false);
 
         /* set up photoview and attacher */
         photoView = (PhotoView) root.findViewById(R.id.photoView);

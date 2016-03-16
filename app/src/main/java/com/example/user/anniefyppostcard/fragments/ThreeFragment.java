@@ -25,7 +25,7 @@ public class ThreeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_three, container, false);
+        View root = inflater.inflate(R.layout.fragment_write, container, false);
 
         View writeButton =  root.findViewById(R.id.writeButton);
         writeButton.setOnClickListener(new View.OnClickListener() {
