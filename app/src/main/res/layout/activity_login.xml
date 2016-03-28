@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/greece"
     tools:context=".activity.LoginActivity">
 
     <!-- Login progress -->
@@ -32,6 +33,13 @@
             android:orientation="vertical"
             android:weightSum="1">
 
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logo"
+                android:id="@+id/imageView2"
+                android:layout_gravity="center_horizontal" />
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -43,6 +51,7 @@
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
+                    android:textColor="#FFFFFF"
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
@@ -61,6 +70,7 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
+                    android:textColor="#FFFFFF"
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
@@ -73,6 +83,8 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold"
+                android:background="#00BCD4"
+                android:textColor="#FFFFFF"
                 android:onClick="sendMessage" />
 
             <com.facebook.login.widget.LoginButton
@@ -81,15 +93,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:onClick="sendMessage" />
+                android:onClick="sendMessage"
+                android:layout_weight="1" />
 
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/sign_in_button"
-                android:layout_width="match_parent"
+                android:layout_width="356dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
-                android:onClick="sendMessage" />/>
+                android:onClick="sendMessage" />
 
         </LinearLayout>
     </ScrollView>
