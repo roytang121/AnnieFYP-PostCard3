@@ -18,8 +18,8 @@ var World = {
 
 			The URL and the size are required when creating a new AR.VideoDrawable. Optionally the offsetX and offsetY parameters are set to position the video on the target. The values for the offsets are in SDUs. If you want to know more about SDUs look up the code reference.
 		*/
-		var video = new AR.VideoDrawable("assets/video.mp4", 0.40, {
-			offsetY: -0.3,
+		var video = new AR.VideoDrawable("assets/video.mp4", 1.0, {
+			offsetY: 0.0,
 		});
 
 		/*

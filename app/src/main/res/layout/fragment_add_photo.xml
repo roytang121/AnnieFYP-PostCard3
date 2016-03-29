@@ -14,7 +14,7 @@
         <com.example.user.anniefyppostcard.PostCardView
             android:id="@+id/postcardView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="230dp"
             />
     </LinearLayout>
 
@@ -30,6 +30,7 @@
             android:layout_height="80dp"
             android:text="Frame"
             android:backgroundTint="@android:color/darker_gray"
+            android:background="@android:color/darker_gray"
             android:layout_marginRight="8dp"
             android:textColor="@android:color/white"
             android:layout_weight=
@@ -40,6 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:backgroundTint="@color/colorAccent"
+            android:background="@color/colorAccent"
             android:layout_marginLeft="8dp"
             android:text="Layout"
             android:textColor="@android:color/white"

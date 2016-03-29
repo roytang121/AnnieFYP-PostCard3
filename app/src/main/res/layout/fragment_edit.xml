@@ -33,6 +33,7 @@
         android:text="Next"
         android:textColor="@android:color/white"
         android:backgroundTint="#B2EBF2"
+        android:background="#B2EBF2"
         android:layout_alignParentBottom="true"
         />
 </RelativeLayout>

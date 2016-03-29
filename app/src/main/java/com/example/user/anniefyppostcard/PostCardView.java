@@ -97,7 +97,7 @@ public class PostCardView extends View {
 //                scaledBitmap.recycle();
 //                scaledBitmap = null;
 //            }
-            scaledBitmap = Bitmap.createScaledBitmap(bitmap, ((int) bitmapArea.width()), ((int) (bitmapArea.height() * scaleHeight)), false);
+            scaledBitmap = Bitmap.createScaledBitmap(bitmap, ((int) bitmapArea.width()), ((int) (bitmapArea.height())), false);
             Rect src = new Rect(0,0, ((int) bitmapArea.width()), ((int) bitmapArea.height()));
             canvas.drawBitmap(scaledBitmap, src, bitmapArea, bitmapPaint);
         }

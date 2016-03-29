@@ -13,6 +13,8 @@ import android.view.MenuItem;
 
 import com.example.user.anniefyppostcard.R;
 import com.example.user.anniefyppostcard.fragments.DesignFragment;
+import com.example.user.anniefyppostcard.fragments.SampleCamFragment;
+import com.example.user.anniefyppostcard.fragments.SinglePicFragment;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
@@ -125,16 +127,21 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position) {
+                case 0:
+                    return SinglePicFragment.newInstance(R.drawable.greece);
+                case 1:
+                    return SinglePicFragment.newInstance(R.drawable.greece);
                 case 2:
                     return DesignFragment.newInstance();
+                case 3:
+                    return new SampleCamFragment();
             }
             return PlaceholderFragment.newInstance(position + 1);
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
@@ -143,9 +150,11 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 case 0:
                     return "Explore";
                 case 1:
-                    return "Community";
+                    return "Society";
                 case 2:
                     return "Design";
+                case 3:
+                    return "View AR";
             }
             return null;
 
