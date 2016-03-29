@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.example.user.anniefyppostcard.R;
 import com.example.user.anniefyppostcard.fragments.AddPhotoFragment;
 import com.example.user.anniefyppostcard.fragments.FiveFragment;
-import com.example.user.anniefyppostcard.fragments.FourFragment;
+import com.example.user.anniefyppostcard.fragments.SampleCamFragment;
 import com.example.user.anniefyppostcard.fragments.ThreeFragment;
 import com.example.user.anniefyppostcard.fragments.TwoFragment;
 
@@ -64,7 +64,7 @@ public class DesignPostCardsActivity extends AppCompatActivity {
         adapter.addFrag(new AddPhotoFragment(), "Add photos");
         adapter.addFrag(new TwoFragment(), "Edit");
         adapter.addFrag(new ThreeFragment(), "Write");
-        adapter.addFrag(new FourFragment(), "AR");
+        adapter.addFrag(new SampleCamFragment(), "AR");
         adapter.addFrag(new FiveFragment(), "Send");
         viewPager.setAdapter(adapter);
     }
